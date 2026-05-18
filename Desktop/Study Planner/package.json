@@ -1,0 +1,30 @@
+{
+  "name": "study-planner",
+  "version": "1.0.0",
+  "description": "Study planner Web Application",
+  "homepage": "https://github.com/techgirlly/study-planner#readme",
+  "bugs": {
+    "url": "https://github.com/techgirlly/study-planner/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techgirlly/study-planner.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm init"
+  },
+  "keywords": [],
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.22.3"
+  }
+}
