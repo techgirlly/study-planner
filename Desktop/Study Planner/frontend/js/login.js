@@ -14,7 +14,7 @@ loginForm.addEventListener("submit", async (e) => {
   try {
 
     const response = await fetch(
-      "http://localhost:5000/api/auth/login",
+      "http://study-planner-production-8246.up.railway.app/api/auth/login",
       {
         method: "POST",
 
