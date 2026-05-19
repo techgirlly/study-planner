@@ -87,37 +87,33 @@ Authentication:
 
 ### 📁 Folder Structure
 
-```bash
-study-planner/
-├── frontend/
-│   ├── index.html
-│   ├── login.html
-│   ├── register.html
-│   ├── dashboard.html
-│   │
-│   ├── css/
-│   │   ├── style.css
-│   │   ├── dashboard.css
-│   │   ├── login.css
-│   │   └── register.css
-│   │
-│   └── js/
-│       ├── app.js
-│       ├── auth.js
-│       ├── dashboard.js
-│       └── tasks.js
+study-planner/ ├── frontend/ 
+│ ├── index.html
+│ ├── login.html
+│ ├── register.html
+│ ├── dashboard.html
+│
+│ ├── css/
+│ │ ├── style.css
+│ │ ├── dashboard.css
+│ │ ├── login.css
+│ │ └── register.css
+│
+│ └── js/
+│ ├── app.js
+│ ├── auth.js
+│ ├── dashboard.js
+│ └── tasks.js
 │
 ├── backend/
-│   ├── config/
-│   │   └── db.js
-│   │
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   │
-│   ├── server.js
-│   └── .env
+│ ├── config/
+│ │ └── db.js
+│ ├── controllers/
+│ ├── middleware/
+│ ├── models/
+│ ├── routes/
+│ ├── server.js
+│ └── .env
 │
 ├── package.json
 └── README.md
