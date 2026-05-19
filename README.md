@@ -87,22 +87,42 @@ Authentication:
 
 ## 📁 Folder Structure
 
-study-planner/  
-├── server.js  
-├── db.js  
-├── .env  
-├── package.json  
-├── routes/  
-├── controllers/  
-├── middleware/  
-├── public/  
-│   ├── index.html  
-│   ├── login.html  
-│   ├── register.html  
-│   ├── dashboard.html  
-│   ├── style.css  
-│   ├── app.js  
-
+study-planner/
+│
+├── frontend/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   │
+│   ├── CSS/
+│   │   ├── dashboard.css
+│   │   ├── login.css
+│   │   └── register.css
+│   │
+│   └── JS/
+│       ├── dashboard.js
+│       ├── login.js
+│       └── register.js
+│
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   │
+│   ├── controllers/
+│   │
+│   ├── middleware/
+│   │
+│   ├── models/
+│   │
+│   ├── routes/
+│   │
+│   ├── server.js
+│   └── .env
+│
+├── package.json
+├── package-lock.json
+└── README.md
 ---
 
 ## 🚀 Getting Started
