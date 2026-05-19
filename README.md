@@ -85,10 +85,10 @@ Authentication:
 
 ---
 
-## 📁 Folder Structure
+### 📁 Folder Structure
 
+```bash
 study-planner/
-│
 ├── frontend/
 │   ├── index.html
 │   ├── login.html
@@ -112,31 +112,14 @@ study-planner/
 │   │   └── db.js
 │   │
 │   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── taskController.js
-│   │   ├── scheduleController.js
-│   │   └── subjectController.js
-│   │
 │   ├── middleware/
-│   │   └── authMiddleware.js
-│   │
 │   ├── models/
-│   │   ├── userModel.js
-│   │   ├── taskModel.js
-│   │   ├── scheduleModel.js
-│   │   └── subjectModel.js
-│   │
 │   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── taskRoutes.js
-│   │   ├── scheduleRoutes.js
-│   │   └── subjectRoutes.js
 │   │
 │   ├── server.js
 │   └── .env
 │
 ├── package.json
-├── package-lock.json
 └── README.md
 ---
 
