@@ -85,38 +85,45 @@ Authentication:
 
 ---
 
-### 📁 Folder Structure
+## 📁 Folder Structure
 
-study-planner/ ├── frontend/ 
-│ ├── index.html
-│ ├── login.html
-│ ├── register.html
-│ ├── dashboard.html
+study-planner/
 │
-│ ├── css/
-│ │ ├── style.css
-│ │ ├── dashboard.css
-│ │ ├── login.css
-│ │ └── register.css
-│
-│ └── js/
-│ ├── app.js
-│ ├── auth.js
-│ ├── dashboard.js
-│ └── tasks.js
+├── frontend/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   │
+│   ├── CSS/
+│   │   ├── dashboard.css
+│   │   ├── login.css
+│   │   └── register.css
+│   │
+│   └── JS/
+│       ├── dashboard.js
+│       ├── login.js
+│       └── register.js
 │
 ├── backend/
-│ ├── config/
-│ │ └── db.js
-│ ├── controllers/
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ ├── server.js
-│ └── .env
+│   ├── config/
+│   │   └── db.js
+│   │
+│   ├── controllers/
+│   │
+│   ├── middleware/
+│   │
+│   ├── models/
+│   │
+│   ├── routes/
+│   │
+│   ├── server.js
+│   └── .env
 │
 ├── package.json
+├── package-lock.json
 └── README.md
+
 ---
 
 ## 🚀 Getting Started
@@ -171,7 +178,6 @@ Google OAuth login
 Study group collaboration  
 
 ---
-
 
 Study Planner Web App  
 Full-stack project built for learning and academic demonstration
