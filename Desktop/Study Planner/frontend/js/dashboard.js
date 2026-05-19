@@ -9,10 +9,7 @@ let username = localStorage.getItem("username") || "@username";
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 let sessions = JSON.parse(localStorage.getItem("sessions")) || [];
 let subjects = JSON.parse(localStorage.getItem("subjects")) || [
-  "Mathematics",
-  "Physics",
-  "Chemistry",
-  "English"
+
 ];
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -66,6 +63,28 @@ function addTask() {
 
   saveData();
   renderAll();
+}
+function addTaskFromPage() {
+
+  const input =
+    document.getElementById("taskPageInput");
+
+  if (input.value.trim() === "") {
+    alert("Please enter a task");
+    return;
+  }
+
+  tasks.push({
+    id: Date.now(),
+    text: input.value,
+    completed: false
+  });
+
+  input.value = "";
+
+  saveData();
+  renderAll();
+
 }
 
 function toggleTask(id) {
@@ -146,7 +165,40 @@ function addSession() {
   saveData();
   renderAll();
 }
+function addSessionFromPage() {
 
+  const time =
+    document.getElementById("sessionPageTime");
+
+  const subject =
+    document.getElementById("sessionPageSubject");
+
+  const details =
+    document.getElementById("sessionPageDetails");
+
+  if (time.value === "" || subject.value.trim() === "") {
+
+    alert("Please enter time and subject");
+
+    return;
+
+  }
+
+  sessions.push({
+    id: Date.now(),
+    time: time.value,
+    subject: subject.value,
+    details: details.value || "Study session"
+  });
+
+  time.value = "";
+  subject.value = "";
+  details.value = "";
+
+  saveData();
+  renderAll();
+
+}
 function deleteSession(id) {
   sessions = sessions.filter(session => session.id !== id);
 

@@ -35,7 +35,10 @@ loginForm.addEventListener("submit", async (e) => {
 
       localStorage.setItem("token", data.token);
 
+
       message.innerText = "Login successful";
+
+      localStorage.setItem("username", data.username);
 
       window.location.href = "dashboard.html";
 

@@ -116,7 +116,16 @@
         <div class="panel full">
           <div class="panel-header">
             <h2>My Schedule</h2>
-            <button onclick="openScheduleForm()">+ Add Study Session</button>
+            <button onclick="document.getElementById('schedulePageForm').classList.toggle('hidden')">
+  + Add Study Session
+</button>
+
+            <div class="form hidden" id="schedulePageForm">
+  <input type="time" id="sessionPageTime">
+  <input type="text" id="sessionPageSubject" placeholder="Subject">
+  <input type="text" id="sessionPageDetails" placeholder="Details">
+  <button onclick="addSessionFromPage()">Save</button>
+</div>
           </div>
 
           <div id="schedulePageList" class="list"></div>
@@ -127,7 +136,14 @@
         <div class="panel full">
           <div class="panel-header">
             <h2>My Tasks</h2>
-            <button onclick="openTaskForm()">+ Add Task</button>
+            <button onclick="document.getElementById('taskPageForm').classList.toggle('hidden')">
+  + Add Task
+</button>
+
+            <div class="form hidden" id="taskPageForm">
+  <input type="text" id="taskPageInput" placeholder="Enter your task">
+  <button onclick="addTaskFromPage()">Save</button>
+</div>
           </div>
 
           <ul id="tasksPageList" class="task-list"></ul>
@@ -176,6 +192,6 @@
     </main>
   </div>
 
-  <script src="dashboard.js"></script>
+  <script src="js/dashboard.js"></script>
 </body>
 </html>

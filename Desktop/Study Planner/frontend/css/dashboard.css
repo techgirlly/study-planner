@@ -277,6 +277,16 @@ button:hover {
   border-radius: 10px;
   background: var(--bg);
   color: var(--text);
+  input[type="time"] {
+  background: var(--bg);
+  color: var(--text);
+  input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+}
+
+
 }
 
 .hidden {
