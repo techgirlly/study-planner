@@ -95,27 +95,42 @@ study-planner/
 │   ├── register.html
 │   ├── dashboard.html
 │   │
-│   ├── CSS/
+│   ├── css/
+│   │   ├── style.css
 │   │   ├── dashboard.css
 │   │   ├── login.css
 │   │   └── register.css
 │   │
-│   └── JS/
+│   └── js/
+│       ├── app.js
+│       ├── auth.js
 │       ├── dashboard.js
-│       ├── login.js
-│       └── register.js
+│       └── tasks.js
 │
 ├── backend/
 │   ├── config/
 │   │   └── db.js
 │   │
 │   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── taskController.js
+│   │   ├── scheduleController.js
+│   │   └── subjectController.js
 │   │
 │   ├── middleware/
+│   │   └── authMiddleware.js
 │   │
 │   ├── models/
+│   │   ├── userModel.js
+│   │   ├── taskModel.js
+│   │   ├── scheduleModel.js
+│   │   └── subjectModel.js
 │   │
 │   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── taskRoutes.js
+│   │   ├── scheduleRoutes.js
+│   │   └── subjectRoutes.js
 │   │
 │   ├── server.js
 │   └── .env
