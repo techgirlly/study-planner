@@ -1,0 +1,31 @@
+ body{
+      font-family: Arial;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container{
+      background: rgb(64, 161, 180);
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    input{
+      width: 80%;
+      padding: 10px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    button{
+      width: 80%;
+      padding: 10px;
+      margin-top: 15px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }

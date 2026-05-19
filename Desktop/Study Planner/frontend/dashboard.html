@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Study Planner Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="logo">
+        <span>🎓</span>
+        <h2>Study Planner</h2>
+      </div>
+
+      <ul class="menu">
+        <li class="nav-link active" data-page="home">🏠 Home</li>
+        <li class="nav-link" data-page="schedule">📅 Schedule</li>
+        <li class="nav-link" data-page="tasks">☑️ Tasks</li>
+        <li class="nav-link" data-page="subjects">📖 Subjects</li>
+        <li class="nav-link" data-page="settings">⚙️ Settings</li>
+        <li id="logoutBtn" class="logout">🚪 Logout</li>
+      </ul>
+    </aside>
+
+    <main class="main">
+
+      <header class="topbar">
+        <div>
+          <h1 id="greeting">Hey, @username 👋</h1>
+          <p>Let's make today productive.</p>
+        </div>
+
+        <button id="themeBtn" class="theme-btn">☀️</button>
+      </header>
+
+      <section id="home" class="page active-page">
+
+        <div class="stats">
+          <div class="stat-card">
+            <div class="icon purple">🕒</div>
+            <h3>Study Time</h3>
+            <h2 id="studyTime">0h 0m</h2>
+            <p>Today</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="icon green">✅</div>
+            <h3>Tasks Done</h3>
+            <h2 id="tasksDone">0 / 0</h2>
+            <p>Today</p>
+            <div class="mini-progress">
+              <span id="miniProgress"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+
+          <div class="panel schedule-panel">
+            <div class="panel-header">
+              <h2>Today's Schedule</h2>
+              <button onclick="openScheduleForm()">+ Add Study Session</button>
+            </div>
+
+            <div class="form hidden" id="scheduleForm">
+              <input type="time" id="sessionTime">
+              <input type="text" id="sessionSubject" placeholder="Subject">
+              <input type="text" id="sessionDetails" placeholder="Details">
+              <button onclick="addSession()">Save</button>
+            </div>
+
+            <div id="scheduleList" class="list empty-box">
+              <div class="empty-icon">🗓️</div>
+              <p>No study sessions yet.</p>
+              <small>Add your first study session!</small>
+            </div>
+          </div>
+
+          <div class="panel tasks-panel">
+            <div class="panel-header">
+              <h2>Tasks</h2>
+              <button onclick="openTaskForm()">+ Add Task</button>
+            </div>
+
+            <div class="form hidden" id="taskForm">
+              <input type="text" id="taskInput" placeholder="Enter your task">
+              <button onclick="addTask()">Save</button>
+            </div>
+
+            <ul id="taskList" class="task-list"></ul>
+            <p class="small-center">No more tasks!</p>
+          </div>
+
+          <div class="panel progress-panel">
+            <h2>Study Progress</h2>
+
+            <div class="circle-wrap">
+              <div class="circle" id="progressCircle">
+                <span id="progressPercent">0%</span>
+                <small>Today</small>
+              </div>
+            </div>
+
+            <p class="goal-text">
+              <strong id="progressTime">0h 0m</strong> / 5h goal
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="schedule" class="page">
+        <div class="panel full">
+          <div class="panel-header">
+            <h2>My Schedule</h2>
+            <button onclick="openScheduleForm()">+ Add Study Session</button>
+          </div>
+
+          <div id="schedulePageList" class="list"></div>
+        </div>
+      </section>
+
+      <section id="tasks" class="page">
+        <div class="panel full">
+          <div class="panel-header">
+            <h2>My Tasks</h2>
+            <button onclick="openTaskForm()">+ Add Task</button>
+          </div>
+
+          <ul id="tasksPageList" class="task-list"></ul>
+        </div>
+      </section>
+
+      <section id="subjects" class="page">
+        <div class="panel full">
+          <div class="panel-header">
+            <h2>My Subjects</h2>
+            <button onclick="openSubjectForm()">+ Add Subject</button>
+          </div>
+
+          <div class="form hidden" id="subjectForm">
+            <input type="text" id="subjectInput" placeholder="Enter subject">
+            <button onclick="addSubject()">Save</button>
+          </div>
+
+          <ul id="subjectList" class="subject-list"></ul>
+        </div>
+      </section>
+
+      <section id="settings" class="page">
+        <div class="panel full">
+          <h2>Settings</h2>
+
+          <div class="settings-box">
+            <h3>Appearance</h3>
+            <p>Choose Theme</p>
+
+            <div class="theme-options">
+              <button onclick="setLightMode()">☀️ Light Mode</button>
+              <button onclick="setDarkMode()">🌙 Dark Mode</button>
+            </div>
+          </div>
+
+          <div class="settings-box">
+            <h3>Profile</h3>
+            <label>Username</label>
+            <input type="text" id="usernameInput" placeholder="@username">
+            <button onclick="saveUsername()">Save Username</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
